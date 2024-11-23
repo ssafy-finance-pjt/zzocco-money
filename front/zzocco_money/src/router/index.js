@@ -10,6 +10,7 @@ import BankLocatorView from '@/views/BankLocatorView.vue'
 import SavingsView from '@/views/SavingsView.vue'
 import DetailView from '@/views/DetailView.vue'
 import PostArticleView from '@/views/PostArticleView.vue'
+import FbtiTestView from '@/views/fbtiTestView.vue'
 
 
 const router = createRouter({
@@ -69,6 +70,16 @@ const router = createRouter({
       path: '/bank_locator',
       name: 'bank-locator',
       component: BankLocatorView
+    },
+    {
+      path: '/fbti',
+      name: 'fbti-test',
+      component: FbtiTestView,
+      children: [
+        {
+          path: ''
+        }
+      ]
     },
   ],
 })
